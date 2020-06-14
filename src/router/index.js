@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import Heartrate from '../views/Heartrate.vue'
+import Select from '../views/Select.vue'
 
 Vue.use(VueRouter)
 
@@ -9,6 +11,16 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/heartrate/:type',
+    name: 'Heartrate',
+    component: Heartrate
+  },
+  {
+    path: '/select',
+    name: 'Select',
+    component: Select
   },
   {
     path: '/about',
@@ -22,6 +34,7 @@ const routes = [
 
 const router = new VueRouter({
   routes
+  // mode: 'abstract'
 })
 
 export default router
